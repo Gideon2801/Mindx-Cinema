@@ -34,7 +34,7 @@
 
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/chatbot.css" />
-    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/watch.css" />
   </head>
   <body>
     <div class="backdrop">
@@ -60,44 +60,27 @@
         <div id="avatar-action-container"></div>
       </div>
     </div>
-    <div class="hero-section">
-      <img
-        id="hero-image"
-        class="hero-image fade-in"
-        onload="this.style.opacity = '0.5'"
-        alt=""
-      />
 
-      <div class="hero-section-info">
-        <div>
-          <p id="hero-title" class="hero-section-info-title"></p>
-          <p
-            id="hero-description"
-            class="hero-section-info-description multiline-ellipsis-4"
-          ></p>
-          <div class="action-buttons-container">
-            <a id="watch-now-btn" class="btn">
-              <i class="fa-regular fa-circle-play"></i>
-              <span>Watch Now</span>
-            </a>
-            <a id="view-info-btn" class="btn">
-              <i class="fa-solid fa-circle-info"></i>
-              <span>View Info</span>
-            </a>
-          </div>
+    <main>
+      <div style="flex-grow: 1">
+        <div class="iframe-container">
+          <iframe title="" frameborder="0" allowfullscreen></iframe>
         </div>
-      </div>
-      <div class="hero-preview-img-container">
-        <img
-          class="fade-in"
-          onload="this.style.opacity = '1'"
-          id="hero-preview-image"
-          alt=""
-        />
-      </div>
-    </div>
+        <div class="movie-info">
+          <p id="movie-title"></p>
+          <p id="movie-description"></p>
+          <p id="release-date"></p>
+        </div>
 
-    <main></main>
+        <div id="comment-box-container"></div>
+
+        <div
+          id="comments"
+          class="d-flex flex-column align-items-stretch gap-3"
+        ></div>
+      </div>
+      <div id="similar"></div>
+    </main>
 
     <footer>
       <p>Copyright &copy; MindX School</p>
@@ -118,6 +101,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script type="module" src="./scripts/config.js"></script>
-    <script type="module" src="./scripts/home.js"></script>
+    <script type="module" src="./scripts/watch.js"></script>
   </body>
 </html>
